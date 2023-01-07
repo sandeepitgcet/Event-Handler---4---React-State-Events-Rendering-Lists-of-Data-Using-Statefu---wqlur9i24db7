@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import '../styles/App.css';
 const App = () => {
-  const [isClicked, setIsClicked] = useState(false)
+  const [isClicked, setIsClicked] = useState(true)
   const handleDoubleClick = (event) =>{
       setIsClicked(!isClicked);
       if(isClicked){
@@ -12,7 +12,7 @@ const App = () => {
   }
   return (
     <div id="main">
-      <button id="dblclick-btn">Double click me</button>
+      <button id="dblclick-btn" onDoubleClick={handleDoubleClick}>Double click me</button>
     </div>
   )
 }
